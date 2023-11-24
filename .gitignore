@@ -1,0 +1,12 @@
+*.log
+*.ini
+*.tar
+*.txt
+*.tar.gz
+*.xml
+*.*~
+test/
+tests/
+vendor/
+upload/
+*.lock
