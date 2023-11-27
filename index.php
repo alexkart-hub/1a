@@ -1,1 +1,2 @@
-<h1>Hello, world!</h1>
+<?php
+require  $_SERVER["DOCUMENT_ROOT"] . "/core/bootstrap.php";

@@ -10,3 +10,4 @@ tests/
 vendor/
 upload/
 *.lock
+_intellij_phpdebug_validator.php
