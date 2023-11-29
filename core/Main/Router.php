@@ -7,13 +7,18 @@ use Core\Main\Router\RouteList;
 
 class Router
 {
-
     public function __construct(
         private Container $container,
-        private RouteList $routeList
+        private RouteList $routeList,
+        private Request $request
     ) {}
 
-    public function match(string $url)
+    public function start(): void
+    {
+        $this->match($this->request->getCurrentUrl());
+    }
+
+    public function match(string $url): void
     {
         $urlPath = parse_url($url)['path'];
         $route = $this->getRoute($urlPath);

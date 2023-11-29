@@ -15,6 +15,11 @@ class Request
         $this->queryParam  = $this->getQuery();
     }
 
+    public function getCurrentUrl()
+    {
+        return $this->getServerParam('REQUEST_URI');
+    }
+
     public function getQueryParam(): array
     {
         return $this->queryParam;
