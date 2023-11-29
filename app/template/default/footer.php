@@ -1,1 +1,1 @@
-<?php
+<hr><br>Footer

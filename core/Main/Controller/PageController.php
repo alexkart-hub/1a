@@ -10,6 +10,11 @@ abstract class PageController extends Controller
     protected static string $class = __CLASS__;
     protected  $page;
 
+    public function index()
+    {
+        $this->page->view();
+    }
+
     protected function init()
     {
         static::$classPrefix = $this->getClassPrefix();
@@ -18,6 +23,7 @@ abstract class PageController extends Controller
         $args = [
             'model' => $model ?: null,
             'view'  => $view ?: null,
+            'controller' => $this
         ];
         $this->page = $this->container->setArguments($args)->get($this->getPageClass());
     }

@@ -6,10 +6,13 @@ use Core\Main\View;
 
 abstract class PageView extends View
 {
-    public function show()
+    public function getTemplate()
     {
-        $template = $_SERVER['DOCUMENT_ROOT'] . '/app/template/default/templates/' . $this->template . '.php';
-        require $_SERVER['DOCUMENT_ROOT'] . '/app/template/default/layout.php';
+        return $_SERVER['DOCUMENT_ROOT'] . '/app/template/default/templates/' . $this->template . '.php';
+    }
 
+    public function getLaiout()
+    {
+        return $_SERVER['DOCUMENT_ROOT'] . '/app/template/default/layout.php';
     }
 }

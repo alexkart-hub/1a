@@ -8,6 +8,6 @@ class MainPageController extends PageController
 {
     public function index()
     {
-        $this->page->view->show();
+        $this->page->view();
     }
 }
