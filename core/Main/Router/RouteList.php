@@ -2,7 +2,6 @@
 
 namespace Core\Main\Router;
 
-use Core\Main\Container;
 use Core\Main\Controller\Page\MainPageController;
 use Core\Main\Request;
 
@@ -10,7 +9,7 @@ class RouteList
 {
     private array $items = [];
 
-    public function __construct(private Container $container, private Request $request)
+    public function __construct(private Request $request)
     {
         $this->init();
     }

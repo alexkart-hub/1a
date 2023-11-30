@@ -6,5 +6,5 @@ use Core\Main\Entity\Page;
 
 class MainPage extends Page
 {
-
+    protected string $pageName = 'main';
 }

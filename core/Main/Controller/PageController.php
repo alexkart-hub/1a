@@ -3,6 +3,7 @@
 namespace Core\Main\Controller;
 
 use Core\Main\Controller;
+use Core\Main\Entity\Script\ScriptList;
 
 abstract class PageController extends Controller
 {
@@ -23,7 +24,8 @@ abstract class PageController extends Controller
         $args = [
             'model' => $model ?: null,
             'view'  => $view ?: null,
-            'controller' => $this
+            'controller' => $this,
+            'scriptList' => $this->container->get(ScriptList::class),
         ];
         $this->page = $this->container->setArguments($args)->get($this->getPageClass());
     }
